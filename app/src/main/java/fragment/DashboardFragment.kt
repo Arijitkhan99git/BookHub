@@ -146,7 +146,7 @@ class DashboardFragment : Fragment() {
             }
         }
 */
-        //netork settings
+        //network settings
         val queue = Volley.newRequestQueue(activity as Context)
         val url = "http://13.235.250.119/v1/book/fetch_books/"
 
@@ -158,10 +158,12 @@ class DashboardFragment : Fragment() {
                     //here we will handle the response
 
                     try {
-                        progressLayout.visibility=View.GONE
+                             progressLayout.visibility=View.GONE
                             val success = it.getBoolean("success")
 
                             if (success) {
+
+                               println("Resonse is $it")
                                 //if get Response is success fetch the data from JSONArray
                                 val data = it.getJSONArray("data")
 
@@ -179,11 +181,7 @@ class DashboardFragment : Fragment() {
 
                                     bookInfoList.add(bookObject)
 
-                                        recyclerAdapter =
-                                            DashboardRecyclerAdapter(
-                                                activity as Context,
-                                                bookInfoList
-                                            )
+                                    recyclerAdapter = DashboardRecyclerAdapter(activity as Context, bookInfoList)
 
                                     recyclerDashboard.layoutManager = layoutManager
                                     recyclerDashboard.adapter = recyclerAdapter
@@ -229,7 +227,7 @@ class DashboardFragment : Fragment() {
                     override fun getHeaders(): MutableMap<String, String> {
                         val headers = HashMap<String, String>()
 
-                        headers["Context-type"] = "application/json"
+                        headers["Content-type"] = "application/json"
                         headers["token"] = "4caf407c2bc15a"
 
                         return headers

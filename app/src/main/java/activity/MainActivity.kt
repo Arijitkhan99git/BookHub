@@ -90,19 +90,7 @@ class MainActivity : AppCompatActivity() {
 
                     drawerLayout.closeDrawers()
                 }
-                R.id.profile ->
-                {
-                    supportFragmentManager.beginTransaction()
-                        .replace(
-                            R.id.frame,
-                            ProfileFragment()
-                        )
-                        .commit()
 
-                    supportActionBar?.title="Profiles"
-
-                    drawerLayout.closeDrawers()
-                }
                 R.id.about ->
                 {
                     supportFragmentManager.beginTransaction()

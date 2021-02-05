@@ -25,19 +25,22 @@
  add to always along scrollbar with toolbar
  -->
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:minHeight="?actionBarSize"
-        android:id="@+id/toolbar"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:layout_scrollFlags="scroll|enterAlways"
         />
+
     </com.google.android.material.appbar.AppBarLayout>
+
 <!--
 app:layout_behavior="@string/appbar_scrolling_view_behavior"
 to add buttom of the toolbar
 -->
+
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="fill_parent"
@@ -45,7 +48,7 @@ to add buttom of the toolbar
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 <!--add Navigation view to add 2 items together(1.Header 2.Menu item) -->
     <com.google.android.material.navigation.NavigationView

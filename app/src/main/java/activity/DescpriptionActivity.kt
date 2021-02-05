@@ -157,8 +157,7 @@ class DescpriptionActivity : AppCompatActivity() {
                                         desbtnAddToFav.setBackgroundColor(favColor)
 
                                     }
-                                    else
-                                    {
+                                    else {
                                         Toast.makeText(this@DescpriptionActivity,"Some error occoured!!",Toast.LENGTH_SHORT).show()
                                     }
 

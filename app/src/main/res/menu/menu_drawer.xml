@@ -13,11 +13,6 @@
         android:icon="@drawable/ic_favourites"
         />
     <item
-        android:id="@+id/profile"
-        android:title="@string/profile"
-        android:icon="@drawable/ic_profile"
-        />
-    <item
         android:id="@+id/about"
         android:title="@string/about"
         android:icon="@drawable/ic_about"

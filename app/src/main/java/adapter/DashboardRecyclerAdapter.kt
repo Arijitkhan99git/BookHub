@@ -17,7 +17,6 @@ import model.Book
 class DashboardRecyclerAdapter (val context: Context, val itemList:ArrayList<Book>):
     RecyclerView.Adapter<DashboardRecyclerAdapter.DashboardViewHolder>()
 {
-
     class DashboardViewHolder(view:View):RecyclerView.ViewHolder(view)
     {
         val txtBookName:TextView=view.findViewById(R.id.txtBookName)
@@ -45,7 +44,7 @@ class DashboardRecyclerAdapter (val context: Context, val itemList:ArrayList<Boo
         holder.txtBookPrice.text=book.bookPrice
         holder.txtBookRating.text=book.bookRating
 
-        Picasso.get().load(book.bookImage).error(R.drawable.default_book_cover).into(holder.imgBookImage);
+        Picasso.get().load(book.bookImage).error(R.drawable.default_book_cover).into(holder.imgBookImage)
         //holder.imgBookImage.setImageResource(book.bookImage)
 
         //set a click_Listner
